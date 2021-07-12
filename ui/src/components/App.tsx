@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React from 'react';
-import LoginScreen from './LoginScreen';
+import LoginScreen from './LoginScreen/LoginScreen';
 import MainScreen from './MainScreen';
 import DamlLedger from '@daml/react';
 import Credentials from '../Credentials';

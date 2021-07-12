@@ -3,11 +3,12 @@
 
 import React, { useCallback } from 'react'
 import { Button, Form, Grid, Header, Image, Segment } from 'semantic-ui-react'
-import Credentials, { computeCredentials } from '../Credentials';
+import Credentials, { computeCredentials } from '../../Credentials';
 import Ledger from '@daml/ledger';
 import { User } from '@daml.js/create-daml-app';
-import { DeploymentMode, deploymentMode, ledgerId, httpBaseUrl} from '../config';
+import { DeploymentMode, deploymentMode, ledgerId, httpBaseUrl} from '../../config';
 import { useEffect } from 'react';
+// import './styles.scss'
 
 type Props = {
   onLogin: (credentials: Credentials) => void;
@@ -78,7 +79,7 @@ const LoginScreen: React.FC<Props> = ({onLogin}) => {
           </Header.Content>
         </Header>
         <Form size='large' className='test-select-login-screen'>
-          <Segment>
+          <Segment className="login-bkg">
             {deploymentMode !== DeploymentMode.PROD_DABL
             ? <>
                 {/* FORM_BEGIN */}
